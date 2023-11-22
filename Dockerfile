@@ -68,7 +68,9 @@ COPY --link --from=silero-downloader /home/downloader/models/silero_model.pt ./i
 
 EXPOSE 5003
 
-#VOLUME /home/python/irene
+VOLUME /home/python/irene/plugins
+VOLUME /home/python/irene/options
+
 # ENV IRENE_HOME=/irene
 WORKDIR /home/python/irene
 #ENTRYPOINT ["python", "-m", "irene", "--default-config", "/home/python/config"]
